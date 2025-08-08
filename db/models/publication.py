@@ -1,11 +1,12 @@
 from pydantic import BaseModel
 from datetime import date
+from typing import List
 
 class Publication(BaseModel):
     id:str
     title:str
     content:str
     category:str
-    tags:list(str)
-    createdAt: date
-    updatedAt: date
+    tags:List[str]
+    createdAt: str
+    updatedAt: str
